@@ -1,0 +1,52 @@
+#********************************************************************************#
+#*                                                                              *#
+#*                               Layered_to_grid_2D                             *#
+#*                           ==========================                         *#
+#*                                                                              *#
+#*                           The Python3 Program Package                        *#
+#*                  For Genrating Grid Model From Layered Model(2D)             *#
+#*                                                                              *#
+#*                                                                              *#
+#*                                  Xingzhong LI                                *#
+#*                        email: xzli8@mail.ustc.edu.cn                         *#
+#*             School of Earth and Space Sciences, USTC, China, 2018            *#
+#*                                                                              *#
+#*     A signed non-commercial agreement is required to use this program.       *#
+#*             Free for non-commercial academic research ONLY.                  *#
+#*       This program is distributed WITHOUT ANY WARRANTY whatsoever.           *#
+#*       Do not redistribute this program without written permission.           *#
+#*                                                                              *#
+#********************************************************************************#
+
+1.Introduction
+    This package is used for generating grid model from layered model in 2D case.
+    And the grid model is used for raytracing by FMM2D(Fast Marching Method 2D)
+    or MFMM2D(Multi_Stage Fast Marching Method 2D). When using the grid model as 
+    an input file of FMM2D, we do not need the interface message, and we can only 
+    get the head wave. While using the grid model as an input file of MFMM2D, we
+    need the interface message and we can get the reflected wave.
+
+2.Directory layout
+    ./doc : documents (To be done)
+
+    ./input : input files
+        grid.dat : grid message
+        layer.dat : layer message
+
+    ./output : output files
+        model.dat : model message
+    
+    ./src : source codes
+        layered_to_grid.py : main function to generate grid model from layered model
+        mod_grid.py : module containing the functions about the grid
+        mod_io.py : module containing the I/O functions
+        mod_layer.py : module containing the functions about the layer
+        mod_plot.py : module containing the plotting fucntions
+
+    readme : this file
+
+    run.sh : shell script to run the python code
+
+3.Useage
+    1> First, make sure your system has python3 installed;
+    2> Then, run the shell script "run.sh".
