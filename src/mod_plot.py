@@ -28,7 +28,8 @@ def plot_model(xmin, xmax, zmin, zmax, nx_grid, nz_grid, v_grid, \
     z_grid = np.linspace(zmin, zmax, nz_grid)
     x_grid, z_grid = np.meshgrid(x_grid, z_grid)
     plt.contourf(x_grid, z_grid, v_grid)
-    plt.colorbar()
+    cbar = plt.colorbar()
+    cbar.set_label("velocity (km/s)")
 
     # plot layer :
     x_layer = np.linspace(xmin, xmax, nx_layer)
