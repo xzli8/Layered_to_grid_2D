@@ -27,7 +27,8 @@
     need the interface message and we can get the reflected wave.
 
 2.Directory layout
-    ./doc : documents (To be done)
+    ./doc : documents
+        Layered_to_grid.pdf : the document about this package
 
     ./input : input files
         grid.dat : grid message
