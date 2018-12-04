@@ -66,11 +66,12 @@ def output_model(filename_model, xmin, xmax, zmin, zmax, d_grid, \
 
     line = "----P_wave Velocity----" + "\n"
     f_model.write(line)
+    line = str(0) + "\t"
     for i in range(0, nx_grid, 1):
-        line = str(i) + "\t"
-        f_model.write(line)
-        if(i == (nx_grid - 1)):
-            f_model.write("\n")
+        line += str(i) + "\t"
+    line += "\n"
+    f_model.write(line)
+
     for i in range(0, nz_grid, 1):
         line = str(i) + "\t"
         for j in range(0, nx_grid, 1):
